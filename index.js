@@ -1,5 +1,6 @@
 module.exports = {
   extends: [
+    "plugin:promise/recommended",
     "standard",
     "standard-react",
     "react-app"
@@ -43,6 +44,7 @@ module.exports = {
     "object-curly-spacing": [
       "error",
       "always"
-    ]
+    ],
+    "promise/no-nesting": 0
   }
 }
