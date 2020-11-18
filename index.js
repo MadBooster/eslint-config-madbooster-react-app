@@ -2,8 +2,10 @@ module.exports = {
   extends: [
     "plugin:promise/recommended",
     "standard",
+    "standard-jsx",
     "standard-react",
-    "react-app"
+    "react-app",
+    'react-app/jest'
   ],
   rules: {
     "keyword-spacing": [
