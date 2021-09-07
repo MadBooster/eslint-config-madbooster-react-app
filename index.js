@@ -32,6 +32,14 @@ module.exports = {
         }
       }
     ],
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^__",
+        "argsIgnorePattern": "^__",
+        "caughtErrorsIgnorePattern": "^__"
+      }
+    ],
     "space-before-function-paren": [
       "error",
       "never"
