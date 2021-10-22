@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-madbooster-react-app",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "description": "Shared eslint config for madbooster react projects",
   "main": "index.js",
   "scripts": {

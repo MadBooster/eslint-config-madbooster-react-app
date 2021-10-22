@@ -37,7 +37,10 @@ module.exports = {
       {
         "varsIgnorePattern": "^__",
         "argsIgnorePattern": "^__",
-        "caughtErrorsIgnorePattern": "^__"
+        "caughtErrorsIgnorePattern": "^__",
+        // from extended configs
+        "args": "none",
+        "ignoreRestSiblings": true
       }
     ],
     "space-before-function-paren": [
