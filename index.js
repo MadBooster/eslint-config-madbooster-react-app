@@ -20,6 +20,14 @@ module.exports = {
     'plugin:react-redux/recommended'
   ],
   rules: {
+    'arrow-parens': [1, 'as-needed'],
+    'generator-star-spacing': [
+      'error',
+      {
+        before: false,
+        after: true
+      }
+    ],
     'keyword-spacing': [
       'error',
       {
@@ -44,8 +52,14 @@ module.exports = {
         }
       }
     ],
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error']
+      }
+    ],
     'no-unused-vars': [
-      'error',
+      'warn',
       {
         varsIgnorePattern: '^__',
         argsIgnorePattern: '^__',
@@ -55,34 +69,31 @@ module.exports = {
         ignoreRestSiblings: true
       }
     ],
-    'space-before-function-paren': [
-      'error',
-      'never'
-    ],
-    'generator-star-spacing': [
-      'error',
-      {
-        before: false,
-        after: true
-      }
-    ],
     'object-curly-spacing': [
       'error',
       'always'
     ],
-    'promise/no-nesting': 0,
-
-    'lodash/prefer-lodash-method': 0,
-    'lodash/import-scope': 0,
-    'lodash-fp/use-fp': 0,
-    'lodash-fp/prefer-get': 0,
-    'lodash-fp/no-extraneous-args': 0,
-    'no-console': [
-      'warn',
+    quotes: [
+      'error',
+      'single',
       {
-        allow: ['warn', 'error']
+        allowTemplateLiterals: true
       }
     ],
+    'space-before-function-paren': [
+      'error',
+      'never'
+    ],
+
+    'promise/no-nesting': 0,
+
+    'lodash/import-scope': [1, 'method'],
+    'lodash/prefer-lodash-method': 0,
+
+    'lodash-fp/no-extraneous-args': 0,
+    'lodash-fp/prefer-get': 0,
+    'lodash-fp/use-fp': 0,
+
     'filenames/match-exported': 1,
     'simple-import-sort/imports': [
       2,
@@ -94,9 +105,12 @@ module.exports = {
         ]
       }
     ],
-    'sort-imports': 0,
+    'sort-imports': 0, // import plugin needs this
     'import/order': 0,
-    'arrow-parens': [1, 'as-needed'],
+
+    'react/jsx-handler-names': 0,
+    'react/jsx-no-useless-fragment': 1,
+    'react/jsx-max-props-per-line': [1, { maximum: 1, when: 'multiline' }],
     'react/jsx-wrap-multilines': [1, {
       declaration: 'parens',
       assignment: 'parens',
@@ -106,13 +120,12 @@ module.exports = {
       logical: 'parens-new-line',
       prop: 'parens-new-line'
     }],
-    'react/jsx-handler-names': 0,
     'react/no-unused-prop-types': 0,
+
     'react-redux/no-unused-prop-types': 2,
     'react-redux/prefer-separate-component-file': 0,
     'react-redux/useSelector-prefer-selectors': 0,
-    'react/jsx-no-useless-fragment': 1,
-    'react/jsx-max-props-per-line': [1, { maximum: 1, when: 'multiline' }],
+
     'you-dont-need-lodash-underscore/is-string': 0,
     'you-dont-need-lodash-underscore/is-function': 0
   }
