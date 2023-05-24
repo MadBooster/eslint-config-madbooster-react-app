@@ -1,7 +1,6 @@
 module.exports = {
   plugins: [
     'filenames',
-    'simple-import-sort',
     'react-redux'
   ],
   extends: [
@@ -12,7 +11,8 @@ module.exports = {
     'react-app',
     'react-app/jest',
     'madbooster-common',
-    'plugin:react-redux/recommended'
+    'plugin:react-redux/recommended',
+    'plugin:react/jsx-runtime'
   ],
   rules: {
     'promise/no-nesting': 0,
@@ -28,8 +28,6 @@ module.exports = {
         ]
       }
     ],
-    'sort-imports': 0, // import plugin needs this
-    'import/order': 0,
 
     'react/jsx-handler-names': 0,
     'react/jsx-no-useless-fragment': 1,
