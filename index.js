@@ -45,6 +45,12 @@ module.exports = {
 
     'react-redux/no-unused-prop-types': 2,
     'react-redux/prefer-separate-component-file': 0,
-    'react-redux/useSelector-prefer-selectors': 0
+    'react-redux/useSelector-prefer-selectors': 0,
+    'react/jsx-max-props-per-line': [
+      'error',
+      {
+        maximum: { multi: 1, single: 4 }
+      }
+    ]
   }
 }

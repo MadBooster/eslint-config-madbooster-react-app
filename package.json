@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-madbooster-react-app",
-  "version": "7.0.3",
+  "version": "8.0.0",
   "description": "Shared eslint config for madbooster react projects",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
     "eslint": "^8.39.0",
-    "eslint-config-madbooster-common": "^2.0.3",
+    "eslint-config-madbooster-common": "^3.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
@@ -33,7 +33,7 @@
   "peerDependencies": {
     "@babel/eslint-parser": "^7.21.3",
     "eslint": ">=7.5.0",
-    "eslint-config-madbooster-common": "^2.0.2",
+    "eslint-config-madbooster-common": "^3.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
