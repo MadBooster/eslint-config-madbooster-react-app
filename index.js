@@ -31,7 +31,6 @@ module.exports = {
 
     'react/jsx-handler-names': 0,
     'react/jsx-no-useless-fragment': 1,
-    'react/jsx-max-props-per-line': [1, { maximum: 1, when: 'multiline' }],
     'react/jsx-wrap-multilines': [1, {
       declaration: 'parens',
       assignment: 'parens',
