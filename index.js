@@ -1,20 +1,45 @@
+const restrictedGlobals = require('confusing-browser-globals')
+
 module.exports = {
+  parser: '@typescript-eslint/parser',
   plugins: [
     'filenames',
-    'react-redux'
+    'react-redux',
+    'jsx-a11y'
   ],
   extends: [
     'plugin:promise/recommended',
+    'plugin:react/recommended',
     'standard',
     'standard-jsx',
     'standard-react',
-    'react-app',
-    'react-app/jest',
     'madbooster-common',
     'plugin:react-redux/recommended',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
+    'plugin:jsx-a11y/recommended'
   ],
   rules: {
+    /** From eslint-config-react-app */
+    'default-case': [1, {
+      commentPattern: '^no default$'
+    }],
+    'getter-return': 1,
+    'no-restricted-globals': [2].concat(restrictedGlobals),
+    'no-extra-label': 1,
+    'no-label-var': 1,
+    'no-loop-func': 1,
+    'no-restricted-syntax': [1, 'WithStatement'],
+    'no-script-url': 1,
+    'no-unused-labels': 1,
+    'no-useless-concat': 1,
+    'require-yield': 1,
+    strict: [1, 'never'],
+    'import/no-amd': 2,
+    'import/no-anonymous-default-export': 1,
+    'react/no-typos': 2,
+    'react/style-prop-object': 1,
+    /***/
+
     'promise/no-nesting': 0,
 
     'filenames/match-exported': 1,
@@ -29,6 +54,7 @@ module.exports = {
       }
     ],
 
+    'react/display-name': 0,
     'react/jsx-handler-names': 0,
     'react/jsx-no-useless-fragment': 1,
     'react/jsx-wrap-multilines': [1, {
@@ -50,6 +76,16 @@ module.exports = {
       {
         maximum: { multi: 1, single: 4 }
       }
-    ]
+    ],
+    'jsx-a11y/no-autofocus': 0,
+
+    'react/jsx-no-leaked-render': ['error', { validStrategies: ['coerce', 'ternary'] }],
+    'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
+
+    // INSPECT THESE LATER:
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/no-noninteractive-element-interactions': 0,
+    'jsx-a11y/no-noninteractive-element-to-interactive-role': 0
   }
 }
