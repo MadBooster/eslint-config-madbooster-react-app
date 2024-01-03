@@ -18,6 +18,17 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended'
   ],
+  env: {
+    browser: true,
+    es2020: true
+  },
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   rules: {
     /** From eslint-config-react-app */
     'default-case': [1, {
@@ -36,13 +47,12 @@ module.exports = {
     strict: [1, 'never'],
     'import/no-amd': 2,
     'import/no-anonymous-default-export': 1,
-    'react/no-typos': 2,
-    'react/style-prop-object': 1,
     /***/
 
     'promise/no-nesting': 0,
 
     'filenames/match-exported': 1,
+    'import/no-extraneous-dependencies': ['error', { packageDir: ['./', '../'] }],
     'simple-import-sort/imports': [
       2,
       {
@@ -54,7 +64,8 @@ module.exports = {
       }
     ],
 
-    'react/display-name': 0,
+    'react/no-typos': 2,
+    'react/style-prop-object': 1,
     'react/jsx-handler-names': 0,
     'react/jsx-no-useless-fragment': 1,
     'react/jsx-wrap-multilines': [1, {
@@ -66,26 +77,38 @@ module.exports = {
       logical: 'parens-new-line',
       prop: 'parens-new-line'
     }],
-    'react/no-unused-prop-types': 0,
-
-    'react-redux/no-unused-prop-types': 2,
-    'react-redux/prefer-separate-component-file': 0,
-    'react-redux/useSelector-prefer-selectors': 0,
     'react/jsx-max-props-per-line': [
       'error',
       {
         maximum: { multi: 1, single: 4 }
       }
     ],
-    'jsx-a11y/no-autofocus': 0,
-
     'react/jsx-no-leaked-render': ['error', { validStrategies: ['coerce', 'ternary'] }],
+    'react/jsx-filename-extension': ['error'],
+
+    'react/display-name': 0,
+    'react/react-in-jsx-scope': 'off',
     'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
+    'react/no-unused-prop-types': 0,
+    'react-redux/no-unused-prop-types': 2,
+    'react-redux/prefer-separate-component-file': 0,
+    'react-redux/useSelector-prefer-selectors': 0,
 
     // INSPECT THESE LATER:
+    'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/no-noninteractive-element-to-interactive-role': 0
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx']
+      }
+    }
   }
 }
