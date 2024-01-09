@@ -52,7 +52,6 @@ module.exports = {
     'promise/no-nesting': 0,
 
     'filenames/match-exported': 1,
-    'import/no-extraneous-dependencies': 0, // Handy rule, but doesn't work well with monorepo. Try again later
     'simple-import-sort/imports': [
       2,
       {
