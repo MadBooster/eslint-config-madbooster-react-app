@@ -93,6 +93,19 @@ module.exports = {
     'react-redux/prefer-separate-component-file': 0,
     'react-redux/useSelector-prefer-selectors': 0,
 
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        cjs: 'ignorePackages',
+        ts: 'never',
+        tsx: 'never',
+        cts: 'never'
+      }
+    ],
+
     // INSPECT THESE LATER:
     'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/click-events-have-key-events': 0,
@@ -105,9 +118,21 @@ module.exports = {
       version: 'detect'
     },
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx']
+      typescript: {
+        alwaysTryTypes: true // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
       }
+    },
+    n: {
+      tryExtensions: ['.js', '.ts'],
+      typescriptExtensionMap: [
+        ['', '.js'],
+        ['.js', '.js'],
+        ['.ts', '.js'],
+        ['.ts', '.ts'],
+        ['.cts', '.cjs'],
+        ['.mts', '.mjs'],
+        ['.tsx', '.jsx']
+      ]
     }
   }
 }
