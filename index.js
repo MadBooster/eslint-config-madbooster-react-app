@@ -64,24 +64,6 @@ export default defineConfig(
         react: {
           version: 'detect',
         },
-        'import-x/resolver': {
-          typescript: {
-            alwaysTryTypes: true,
-          },
-        },
-        n: {
-          tryExtensions: ['.js', '.ts', '.d.ts'],
-
-          typescriptExtensionMap: [
-            ['', '.js'],
-            ['.js', '.js'],
-            ['.ts', '.js'],
-            ['.ts', '.ts'],
-            ['.cts', '.cjs'],
-            ['.mts', '.mjs'],
-            ['.tsx', '.jsx'],
-          ],
-        },
       },
 
       rules: {
